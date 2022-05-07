@@ -85,6 +85,7 @@ input, button{
     background: transparent;
     border: none;
     display: inline-block;
+    outline: none;
 }
 button{
     float: right;
