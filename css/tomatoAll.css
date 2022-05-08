@@ -26,12 +26,11 @@
     margin: 0 auto;
 }
 body{
-    background-color: #f7f7f7;
+    background-color: #fcf0f0;
     font-family: 'RobotoSlab';
 }
 a:hover{
     text-decoration: none;
-    outline-color: #57984C; 
 }
 a:visited{
     color: #57984C;
@@ -39,9 +38,8 @@ a:visited{
 /*                  Site top                */
 
 .banner{
-    height: 850px;
+    background-color: #fff;
     padding-top: 20px;
-    background: url(../images/bg/bg.png) center center/cover no-repeat;
 }
 .header{
     height: 113px;
@@ -49,35 +47,15 @@ a:visited{
 }
 .logo, .searchnav{
     flex-grow:1;
-    /* 630x113 */
 }
 .searchnav{
     display: flex;
     flex-direction: column;
 }
-.caption{
-    position: relative;
-    width: 805px;
-    height: 183px;
-    margin: 0 auto;
-    margin-top: 230px;
-    text-align: center;
-}
-.caption_text{
-    font-size: 48px;
-    text-align: center;
-    color: #735440;
-    font-weight: 700;
-}
-.read_more{
-    background-color: #57984C;
-    color: white;
-    height: 55px;
-    width: 160px;
-    padding: 16px, 31px, 16px, 31px;
-    margin-top: 60px;
-    cursor: pointer;
-    font-family: 'Roboto';
+.bgtomato{
+    height: 480px;
+    margin-top: 20px;
+    background: url(../images/tomatoAll/bg/tomato.png) center center/cover no-repeat;
 }
 
 /*                 Search menu               */
@@ -127,91 +105,60 @@ hr{
     margin-top: 42px;
 }
 
+/*                   main                 */
 
-/*               Products slide              */
-
-.products{
-    height: 190px;
-    padding-top: 48px;
-    margin-bottom: 71px;
-    background-color: white;
-}
-.products_slide{
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.products_slide img{
-    width: 60px;
-    height: 60px;
-}
-.products_slide p {
-    margin-top: 20px;
-}
-
-/*                 Vision mission                */
-
-.vision_mission{
-    height: 1100px;
-    background: url(../images/bg/vision_mission.svg) center center/cover no-repeat;
-}
-.vision{
+.main_activ{
+    font-size: 44px;
+    color: #324950;
     padding-top: 50px;
-    margin-top: 20px;
-}
-.visimg img {
-    width: 540px;
-    height: 500px;
-}
-.misimg1, .visimg1{
-    margin-bottom: 30px;
-    margin-top: 25px;
-}
-.title_vis p{
-    margin-top: 95px;
-    margin-bottom: 0;
-    font-size: 64px;
-    font-weight: 700;
-    color: #324950;
-}
-.text_vis p{
-    font-size: 20px;
-    color: #324950;
-}
-
-/*               main activities            */
-
-.main_activ{
-    height: 640px;
-    background-color: #ededed;
-    margin-top: 100px;
-}
-.main_activ{
-    font-size: 64px;
-    color: #324950;
-    padding-top: 70px;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
 }
 .activ_union{
-    margin-top: -45px;
+    margin-bottom: 40px;
+    margin-top: 35px;
+}
+.main_text p, .line_bold{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.main_text .line, .line_bold{
+    border-left: 4px solid #EB5757;
+    padding-left: 26px;
+} 
+.line_bold{
+    font-weight: 700;
+    margin-top: 47px;
+    margin-bottom: 47px;
 }
 .activ_row{
-    display: flex;
-    text-align: center;
+    background-color: #fff;
+    padding: 0 5px 50px;
 }
 .activ_column{
-    flex: 0 0 33%;
-    font-size: 24px;
-    color: #57984C;
+    font-size: 20px;
+}
+.activ_column .topic{
+    margin-bottom: 0;
+    margin-top: 50px;
 }
 .activ_column .activ_examples{
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     color: #324950;
+}
+.wh_bg{
+    width: 350px;
+    height: 69px;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 9px 0;
+    color: #57984C;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /*                     footer                   */
