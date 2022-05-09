@@ -32,55 +32,35 @@ body{
 a:hover{
     text-decoration: none;
 }
-.activ_column a:hover{
-    text-decoration: none;
-    outline-color: #57984C; 
-}
-.activ_column a:visited{
-    color: #57984C;
-}
+/* a:visited{
+    color: none;
+} */
+
 /*                  Site top                */
 
-.banner{
-    height: 850px;
+section.header{
+    -webkit-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    -moz-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    height: 122px;
+    display: flex;
     padding-top: 20px;
-    background: url(../images/bg/bg.png) center center/cover no-repeat;
+    padding-bottom: 20px;
+    background-color: #fff;
 }
 .header{
-    height: 113px;
     display: flex;
+}
+.logo img{
+    width: 166px;
+    height: 83px;
 }
 .logo, .searchnav{
     flex-grow:1;
-    /* 630x113 */
 }
 .searchnav{
     display: flex;
     flex-direction: column;
-}
-.caption{
-    position: relative;
-    width: 805px;
-    height: 183px;
-    margin: 0 auto;
-    margin-top: 230px;
-    text-align: center;
-}
-.caption_text{
-    font-size: 48px;
-    text-align: center;
-    color: #735440;
-    font-weight: 700;
-}
-.read_more{
-    background-color: #57984C;
-    color: white;
-    height: 55px;
-    width: 160px;
-    padding: 16px, 31px, 16px, 31px;
-    margin-top: 60px;
-    cursor: pointer;
-    font-family: 'Roboto';
 }
 
 /*                 Search menu               */
@@ -127,96 +107,65 @@ hr{
 }
 .navigation{
     text-align: right;
-    margin-top: 42px;
+    margin-top: 35px;
 }
 
+/*                      Main                    */
 
-/*               Products slide              */
-
-.products{
-    height: 190px;
-    padding-top: 48px;
-    margin-bottom: 71px;
-    background-color: white;
+.main{
+    background: url(../images/tomatoOne/bg.svg) center center/1450px 1330px no-repeat;
 }
-.products_slide{
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.arrow p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #57984C;
+    margin-top: 18px;
+    margin-left: 15px;
 }
-.products_slide img{
-    width: 60px;
-    height: 60px;
-}
-.products_slide p {
-    margin-top: 20px;
-}
-
-/*                 Vision mission                */
-
-.vision_mission{
-    height: 1100px;
-    background: url(../images/bg/vision_mission.svg) center center/cover no-repeat;
-}
-.vision{
-    padding-top: 50px;
-    margin-top: 20px;
-}
-.visimg img {
-    width: 540px;
-    height: 500px;
-}
-.misimg1, .visimg1{
-    margin-bottom: 30px;
-    margin-top: 25px;
-}
-.title_vis p{
-    margin-top: 95px;
-    margin-bottom: 0;
-    font-size: 64px;
+.col-md-6 .main{
     font-weight: 700;
-    color: #324950;
-}
-.text_vis p{
-    font-size: 20px;
-    color: #324950;
-}
-
-/*               main activities            */
-
-.main_activ{
-    height: 640px;
-    background-color: #ededed;
-    margin-top: 100px;
-}
-.main_activ{
-    font-size: 64px;
-    color: #324950;
-    padding-top: 70px;
-    text-align: center;
-    font-weight: 700;
-}
-.activ_union{
-    margin-top: -45px;
-}
-.activ_row{
-    display: flex;
-    text-align: center;
-}
-.activ_column{
-    flex: 0 0 33%;
-    font-size: 24px;
+    font-size: 54px;
     color: #57984C;
 }
-.activ_column .activ_examples{
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
+span{
     color: #324950;
 }
-
+.col-md-6 .reddiv{
+    margin-top: 30px;
+    color: #CF2333;
+    font-size: 30px;
+    font-weight: 700;
+}
+.reddiv .col-md-3{
+    margin-right: -40px;
+    margin-bottom: 40px;
+}
+.row .line{
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+.row .name{
+    color: #57984C;
+    font-weight: 700;
+    font-size: 20px;
+}
+.row .description{
+    color: #324950;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+li{
+    margin-left: 20px;
+    color: #57984C;
+}
+.btndownload{
+    margin-top: 30px;
+    float: right;
+}
+.col-md-6 .cycle{
+    margin-top: 126px;
+}
 /*                     footer                   */
 
 .footer1 {
