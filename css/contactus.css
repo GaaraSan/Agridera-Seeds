@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('../fonts/RobotoSlab-VariableFont_wght.svg') format('svg'),
+         url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype'),
+         url('../fonts/RobotoSlab-VariableFont_wght.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    background-color: #f7f7f7;
+    font-family: 'RobotoSlab';
+}
+a:hover{
+    text-decoration: none;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+/* a:visited{
+    color: none;
+} */
+
+/*                  Site top                */
+
+section.header{
+    -webkit-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    -moz-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
+    height: 122px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.header{
+    display: flex;
+}
+.logo img{
+    width: 166px;
+    height: 83px;
+}
+.logo, .searchnav{
+    flex-grow:1;
+}
+.searchnav{
+    display: flex;
+    flex-direction: column;
+}
+
+/*                 Search menu               */
+
+.search{
+    width: 350px;
+    height: 29px;
+    float: right;
+}
+.header input, button{
+    background: transparent;
+    border: none;
+    display: inline-block;
+    outline: none;
+}
+button{
+    float: right;
+    cursor: pointer;
+}
+hr{
+    width: 350px;
+    border: none ;
+    margin: 0;
+    height: 1px;
+    background-color: black;
+    color: black;
+}
+
+/*                   Nav list                */
+
+.navitem{
+    list-style: none;
+    display: inline;
+}
+.navlist .navitem{
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #324950;
+}
+.navitem a{
+    color: #324950;
+}
+.navigation{
+    text-align: right;
+    margin-top: 35px;
+}
+
+/*                      Main                    */
+
+.banner{
+    background: url(../images/contactus/banner.jpg) center center/cover no-repeat;
+    height: 480px;
+}
+.main p{
+    font-weight: 700;
+    font-size: 44px;
+    color: #324950;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.form{
+    margin-top: 20px;
+}
+.form p{
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.col-md-5 input{
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+    height: 55px;
+    width: 350px;
+}
+.col-md-7 input{
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+    height: 55px;
+    width: 635px;
+    padding: 15px;
+}
+.col-md-7 input[list="list"]::-webkit-calendar-picker-indicator{
+    opacity: 1;
+    margin-top: -5px;
+}
+.interested input{
+    height: 390px;
+}
+.code_accept{
+    display: flex;
+}
+.code_accept input{
+    width: 225px;
+    margin: 0 30px;
+}
+.code_bot{
+    width: 99px;
+    height: 27px;
+    margin-top: 15px;
+}
+.send_message{
+    width: 255px;
+    height: 55px;
+}
+.adress{
+    margin-top: 50px;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+.adress p{
+    margin-bottom: 0;
+}
+span{
+    color:#57984C;
+}
+.OurAdress{
+    font-weight: 700;
+    font-size: 20px;
+    color: #57984C;
+}
+.adress img{
+    margin-top: -20px;
+    margin-bottom: -15px;
+}
+/*                     footer                   */
+
+.footer1 {
+    height: 76px;
+    background-color: #2D3F45;
+    padding-top: 13px;
+    list-style-type: none;
+}
+
+.footer1 .row {
+    margin-top: 10px;
+}
+
+.footer__item {
+    margin: 0 20px;
+    margin-top: 5px;
+}
+
+.footer__item a {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer__link {
+    margin: 0 13px;
+}
+
+.crosses {
+    padding-top: 20px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+footer {
+    background-color: #324950;
+    color: #B9B9B9;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 10px 0;
+}
