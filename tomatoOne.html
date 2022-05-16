@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/tomatoOne.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Agridera Seeds</title>
 </head>
 <body>
     <section class="header">
-        <div class="header wrapper">
+        <nav class="navbar wrapper">
             <div class="logo">   
                 <a href="index.html"><img src="./images/logo/logo.png" alt="logo" class="logo_png"></a>
             </div> 
-            <div class="searchnav">
-                <div class="search ml-auto">
-                    <input type="text" placeholder="Search" name="search">
-                    <button type="submit"><img src="./images/ico_search.svg" alt=""></button>
-                    <hr>
-                </div>
-                <div class="navigation">
-                    <ul class="navlist">
-                        <li class="navitem"><a href="./index.html">Home</a></li>
-                        <li class="navitem"><a href="#">Company Profile</a></li>
-                        <li class="navitem"><a href="./tomatoAll.html">Products</a></li>
-                        <li class="navitem"><a href="#">Services</a></li>
-                        <li class="navitem"><a href="#">R & D</a></li>
-                        <li class="navitem"><a href="./contactus.html">Contact</a></li>
-                     </ul>
-                </div>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="search ml-auto">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><img src="./images/ico_search.svg" alt=""></button>
+                <hr>
             </div>
-        </div>
-    </section>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                    <li><a href="./tomatoAll.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="./contactus.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section> 
 
     <section class="main">
         <div class="wrapper">
@@ -45,13 +46,21 @@
                     <p class="main"><span>TAG 1002 (TAG 809) </span>Tomato Determinate Red Standard Round</p>
                     <img src="./images/tomatoOne/Union.png" alt="xxxxx">
                     <div class="row reddiv">
-                        <div class="col-md-3">
+                        <div class="redtomato">
                             <img src="./images/tomatoOne/redVector.svg" alt="RedTomato">
                         </div>
                         <div class="col-md-9">
-                            <p>Very high yield and excellent fruits quality!</p>
+                            <b>Very high yield and<br>excellent fruits quality!</b>
                         </div>
                     </div>
+                </div> 
+                <div class="col-md-6">
+                    <img src="./images/tomatoOne/tomato.jpg" class="bigtomato" alt="tomato">
+                    <a href="#"><img src="./images/tomatoOne/Btndownload.svg" class="btndownload" alt="Download"></a>
+                </div>
+            </div>
+            <div class="row fckdescript">
+                <div class="col-md-6">
                     <div class="name characteristics">
                         <p>CHARACTERISTICS</p>
                         <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
@@ -61,31 +70,29 @@
                         <p>Plant</p>
                         <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
                         <ul class="description">
-                            <li><span>Strong vigor that provides good leaf coverage.</span></li>
-                            <li><span>Very high productivity with good fruit setting.</span></li>
-                            <li><span>Early matured variety.</span></li>
+                            <li class="lidescript"><span>Strong vigor that provides good leaf coverage.</span></li>
+                            <li class="lidescript"><span>Very high productivity with good fruit setting.</span></li>
+                            <li class="lidescript"><span>Early matured variety.</span></li>
                         </ul>
                     </div>
                     <div class="name fruit">
                         <p>Fruit</p>
                         <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
                         <ul class="description">
-                            <li><span>Long shelf life on plant and post harvest.</span></li>
-                            <li><span>Nice shiny attractive deep red color.</span></li>
-                            <li><span>Average fruit size: 140 – 160 grams.</span></li>
+                            <li class="lidescript"><span>Long shelf life on plant and post harvest.</span></li>
+                            <li class="lidescript"><span>Nice shiny attractive deep red color.</span></li>
+                            <li class="lidescript"><span>Average fruit size: 140 – 160 grams.</span></li>
                         </ul>
                     </div>
-                </div> 
+                </div>
                 <div class="col-md-6">
-                    <img src="./images/tomatoOne/tomato.jpg" alt="tomato">
-                    <a href="#"><img src="./images/tomatoOne/Btndownload.svg" class="btndownload" alt="Download"></a>
                     <div class="name cycle">
                         <p>Cycle</p>
                         <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
                         <ul class="description">
-                            <li><span>Spring</span></li>
-                            <li><span>Fall </span></li>
-                            <li><span>Winter</span></li>
+                            <li class="lidescript"><span>Spring</span></li>
+                            <li class="lidescript"><span>Fall </span></li>
+                            <li class="lidescript"><span>Winter</span></li>
                         </ul>
                     </div>
                     <div class="name color">

@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/contactus.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Agridera Seeds</title>
 </head>
 <body>
-    <section class="header">
-        <div class="header wrapper">
+    <section class="banner">
+        <nav class="navbar wrapper">
             <div class="logo">   
                 <a href="index.html"><img src="./images/logo/logo.png" alt="logo" class="logo_png"></a>
             </div> 
-            <div class="searchnav">
-                <div class="search ml-auto">
-                    <input type="text" placeholder="Search" name="search">
-                    <button type="submit"><img src="./images/ico_search.svg" alt=""></button>
-                    <hr>
-                </div>
-                <div class="navigation">
-                    <ul class="navlist">
-                        <li class="navitem"><a href="./index.html">Home</a></li>
-                        <li class="navitem"><a href="#">Company Profile</a></li>
-                        <li class="navitem"><a href="./tomatoAll.html">Products</a></li>
-                        <li class="navitem"><a href="#">Services</a></li>
-                        <li class="navitem"><a href="#">R & D</a></li>
-                        <li class="navitem"><a href="./contactus.html">Contact</a></li>
-                     </ul>
-                </div>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="search ml-auto">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><img src="./images/ico_search.svg" alt=""></button>
+                <hr>
             </div>
-        </div>
-    </section>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                    <li><a href="./tomatoAll.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="./contactus.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section> 
 
     <section class="main">
-        <div class="banner"></div>
+        <div class="bannerpng"></div>
         <div class="wrapper">
-            <p>Contact us</p>
-            <img src="./images/vision_mission/Union.png" alt="xxxxx">
+            <p class="contactus">Contact us</p>
+            <img src="./images/vision_mission/Union.png" class="contactus" alt="xxxxx">
             <div class="form row">
-                <div class="col-md-5">
+                <div class="col-lg-5">
                     <div class="datablock name">
                         <p>Name *</p>
                         <input type="text">
@@ -70,7 +71,7 @@
                         <input type="email">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-lg-7">
                     <div class="datablock you">
                         <p>You are a</p>
                         <input type="text" list="list">
@@ -88,10 +89,16 @@
                     </div>
                     <div class="datablock code">
                         <p>Please type this code</p>
-                        <div class="code_accept">
-                            <img class="code_bot" src="./images/contactus/testbot.png" alt="">
-                            <input type="text">
-                            <button type="submit"><img class="send_message" src="./images/contactus/sendmessage.svg" alt="Send Message"></button>
+                        <div class="code_accept row">
+                            <div class="col-sm-2 col-lg-2">
+                                <img class="code_bot" src="./images/contactus/testbot.png" alt="">
+                            </div>
+                            <div class="col-sm-5 col-lg-5">
+                                <input type="text" class="checkbot">
+                            </div>
+                            <div class="col-sm-12 col-lg-5">
+                                <button type="submit" class="send_message"><img class="send_message" src="./images/contactus/sendmessage.svg" alt="Send Message"></button>
+                            </div>
                         </div>
                     </div>
                 </div>

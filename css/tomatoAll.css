@@ -42,11 +42,8 @@ a:visited{
     padding-top: 20px;
 }
 .header{
-    height: 113px;
+    max-height: 113px;
     display: flex;
-}
-.logo, .searchnav{
-    flex-grow:1;
 }
 .searchnav{
     display: flex;
@@ -76,7 +73,7 @@ button{
     cursor: pointer;
 }
 hr{
-    width: 350px;
+    max-width: 350px;
     border: none ;
     margin: 0;
     height: 1px;
@@ -86,7 +83,7 @@ hr{
 
 /*                   Nav list                */
 
-.navitem{
+/* .navitem{
     list-style: none;
     display: inline;
 }
@@ -103,6 +100,47 @@ hr{
 .navigation{
     text-align: right;
     margin-top: 42px;
+} */
+.list{
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #324950;
+}
+.navigation{
+    text-align: right;
+    margin-top: 42px;
+}
+
+.menu{
+    justify-content: end;
+}
+.menu, .search{
+    margin-top: -40px;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    justify-content: end;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+#toggler,
+.navbar label{
+    display: none;
 }
 
 /*                   main                 */
@@ -150,8 +188,7 @@ hr{
     color: #324950;
 }
 .wh_bg{
-    width: 350px;
-    height: 69px;
+    max-width: 350px;
     background-color: white;
     margin-bottom: 30px;
     padding: 9px 0;
@@ -160,11 +197,14 @@ hr{
     font-weight: 400;
     text-align: center;
 }
+.line, .col-xl-4 img{
+    width: 100%;
+}
 
 /*                     footer                   */
 
 .footer1 {
-    height: 76px;
+    min-height: 76px;
     background-color: #2D3F45;
     padding-top: 13px;
     list-style-type: none;

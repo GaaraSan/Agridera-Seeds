@@ -24,6 +24,7 @@
     max-width: 1115px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 body{
     background-color: #f7f7f7;
@@ -32,9 +33,6 @@ body{
 a:hover{
     text-decoration: none;
 }
-/* a:visited{
-    color: none;
-} */
 
 /*                  Site top                */
 
@@ -42,21 +40,17 @@ section.header{
     -webkit-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
     -moz-box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
     box-shadow: 0px 3px 30px 0px rgba(34, 60, 80, 0.26);
-    height: 122px;
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #fff;
 }
-.header{
+/* .header{
     display: flex;
-}
+} */
 .logo img{
     width: 166px;
     height: 83px;
-}
-.logo, .searchnav{
-    flex-grow:1;
 }
 .searchnav{
     display: flex;
@@ -81,7 +75,7 @@ button{
     cursor: pointer;
 }
 hr{
-    width: 350px;
+    max-width: 350px;
     border: none ;
     margin: 0;
     height: 1px;
@@ -91,23 +85,45 @@ hr{
 
 /*                   Nav list                */
 
-.navitem{
-    list-style: none;
-    display: inline;
-}
-.navlist .navitem{
+.list{
     margin-left: 10px;
     font-weight: 600;
     font-size: 18px;
     font-family: 'Roboto';
-    color: #324950;
-}
-.navitem a{
-    color: #324950;
+    color: #324950!important;
 }
 .navigation{
     text-align: right;
-    margin-top: 35px;
+    margin-top: 42px;
+}
+
+.menu{
+    justify-content: end;
+}
+.menu, .search{
+    margin-top: -40px;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+#toggler,
+.navbar label{
+    display: none;
 }
 
 /*                      Main                    */
@@ -122,6 +138,9 @@ hr{
     margin-top: 18px;
     margin-left: 15px;
 }
+.arrow{
+    margin-left: 15px;
+}
 .col-md-6 .main{
     font-weight: 700;
     font-size: 54px;
@@ -134,11 +153,10 @@ span{
     margin-top: 30px;
     color: #CF2333;
     font-size: 30px;
-    font-weight: 700;
 }
-.reddiv .col-md-3{
-    margin-right: -40px;
+.redtomato{
     margin-bottom: 40px;
+    margin-left: 15px;
 }
 .row .line{
     margin-top: -50px;
@@ -155,7 +173,7 @@ span{
     font-size: 17px;
     margin-bottom: 30px;
 }
-li{
+.lidescript{
     margin-left: 20px;
     color: #57984C;
 }
@@ -164,12 +182,19 @@ li{
     float: right;
 }
 .col-md-6 .cycle{
-    margin-top: 126px;
+    margin-top: 190px;
 }
+.fckdescript{
+    margin-top: -126px;
+}
+.bigtomato{
+    width: 100%;
+}
+
 /*                     footer                   */
 
 .footer1 {
-    height: 76px;
+    min-height: 76px;
     background-color: #2D3F45;
     padding-top: 13px;
     list-style-type: none;
