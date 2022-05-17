@@ -29,8 +29,12 @@ body{
     background-color: #fbebd7;
     font-family: 'RobotoSlab';
 }
+a{
+    color: #57984C;
+}
 a:hover{
     text-decoration: none;
+    color: #57984C;
 }
 a:visited{
     color: #57984C;

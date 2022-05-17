@@ -40,66 +40,124 @@
         <div class="wrapper">
             <p class="contactus">Contact us</p>
             <img src="./images/vision_mission/Union.png" class="contactus" alt="xxxxx">
-            <div class="form row">
-                <div class="col-lg-5">
-                    <div class="datablock name">
-                        <p>Name *</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock company">
-                        <p>Company Name</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock position">
-                        <p>Position</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock city">
-                        <p>City</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock country">
-                        <p>Country</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock telephone">
-                        <p>Telephone</p>
-                        <input type="tel">
-                    </div>
-                    <div class="datablock email">
-                        <p>Email *</p>
-                        <input type="email">
+            <form v-on:submit.prevent="makeOrder()" v-if="!orderVisible">
+                <div class="cart">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Изображение</th>
+                            <th scope="col">Наименование</th>
+                            <th scope="col">Описание</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-if="cart" v-for="i in cart" style="width: 100%;">
+                            <td scope="row"><img :src="'./images/tangerineOne/'+i.image" height="50px" alt=""></td>
+                            <td>{{i.title}}</td>
+                            <td>{{i.short_text}}</td>
+                            <td><a @click.prevent="removeFromCart(i.id)"><img src="./images/icons8-close.svg" height="20px" alt="close" :id="'remove_'+i.id"></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div v-if="cart.length<1">
+                        Добавьте что-то в корзину
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="datablock you">
-                        <p>You are a</p>
-                        <input type="text" list="list">
-                        <datalist id="list">
-                            <option>seed producer</option>
-                        </datalist>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="datablock name">
+                            <p>Name *</p>
+                            <input type="text" required v-model="contactFields.name">
+                        </div>
+                        <div class="datablock company">
+                            <p>Company Name</p>
+                            <input type="text" name="company" v-model="contactFields.company">
+                        </div>
+                        <div class="datablock position">
+                            <p>Position</p>
+                            <input type="text" name="position" v-model="contactFields.position">
+                        </div>
+                        <div class="datablock city">
+                            <p>City</p>
+                            <input type="text" name="city" v-model="contactFields.city">
+                        </div>
+                        <div class="datablock country">
+                            <p>Country</p>
+                            <input type="text" name="country" v-model="contactFields.country">
+                        </div>
+                        <div class="datablock telephone">
+                            <p>Telephone</p>
+                            <input type="tel" name="telephone" v-model="contactFields.telephone">
+                        </div>
+                        <div class="datablock email">
+                            <p>Email *</p>
+                            <input type="email" name="email" required v-model="contactFields.email">
+                        </div>
                     </div>
-                    <div class="datablock other">
-                        <p>If other, please specify</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock interested">
-                        <p>You are interested in</p>
-                        <input type="text">
-                    </div>
-                    <div class="datablock code">
-                        <p>Please type this code</p>
-                        <div class="code_accept row">
-                            <div class="col-sm-2 col-lg-2">
-                                <img class="code_bot" src="./images/contactus/testbot.png" alt="">
-                            </div>
-                            <div class="col-sm-5 col-lg-5">
-                                <input type="text" class="checkbot">
-                            </div>
-                            <div class="col-sm-12 col-lg-5">
-                                <button type="submit" class="send_message"><img class="send_message" src="./images/contactus/sendmessage.svg" alt="Send Message"></button>
+                    <div class="col-lg-7">
+                        <div class="datablock you">
+                            <p>You are a</p>
+                            <input type="text" list="list" name="youare" v-model="contactFields.youare">
+                            <datalist id="list">
+                                <option>seed producer</option>
+                            </datalist>
+                        </div>
+                        <div class="datablock other">
+                            <p>If other, please specify</p>
+                            <input type="text" name="other" v-model="contactFields.other">
+                        </div>
+                        <div class="datablock interested">
+                            <p>You are interested in</p>
+                            <input type="text" name="interested" v-model="contactFields.interested">
+                        </div>
+                        <div class="datablock code">
+                            <p>Please type this code</p>
+                            <div class="code_accept row">
+                                <div class="col-sm-2 col-lg-2">
+                                    <img class="code_bot" src="./images/contactus/testbot.png" alt="">
+                                </div>
+                                <div class="col-sm-5 col-lg-5">
+                                    <input type="text" class="checkbot" name="checkbot" v-model="contactFields.checkbot">
+                                </div>
+                                <div class="col-sm-12 col-lg-5">
+                                    <button type="submit" class="send_message"><img class="send_message" src="./images/contactus/sendmessage.svg" alt="Send Message"></button>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </form>
+            <div class="orderInfo" v-if="orderVisible">
+                <div class="row">
+                    <div class="col">
+                        <h1>Your info</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><h3>Name: </h3> <br>
+                        {{contactFields.name}}</p>
+                        <p><h3>Company Name: </h3> <br>
+                        {{contactFields.company}}</p>
+                        <p><h3>Position: </h3> <br>
+                        {{contactFields.position}}</p>
+                        <p><h3>City: </h3> <br>
+                        {{contactFields.city}}</p>
+                        <p><h3>Country: </h3> <br>
+                        {{contactFields.country}}</p>
+                        <p><h3>Telephone: </h3> <br>
+                        {{contactFields.telephone}}</p>
+                        <p><h3>Email: </h3> <br>
+                        {{contactFields.email}}</p>
+                    </div>
+                    <div class="col">
+                        <p><h3>You are a: </h3> <br>
+                        {{contactFields.youare}}</p>
+                        <p><h3>If other, please specify: </h3> <br>
+                        {{contactFields.other}}</p>
+                        <p><h3>You are interested in: </h3> <br>
+                        {{contactFields.interested}}</p>
                     </div>
                 </div>
             </div>
@@ -172,5 +230,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

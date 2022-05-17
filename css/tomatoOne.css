@@ -149,7 +149,7 @@ hr{
 span{
     color: #324950;
 }
-.col-md-6 .reddiv{
+.reddiv{
     margin-top: 30px;
     color: #CF2333;
     font-size: 30px;
@@ -177,15 +177,17 @@ span{
     margin-left: 20px;
     color: #57984C;
 }
-.btndownload{
+.cartbtn{
     margin-top: 30px;
     float: right;
-}
-.col-md-6 .cycle{
-    margin-top: 190px;
-}
-.fckdescript{
-    margin-top: -126px;
+    background-color: white;
+    width: 255px;
+    height: 55px;
+    text-align: center;
+    border-radius: 50px;
+    border: 5px solid green;
+    color: green;
+    padding-top: 10px;
 }
 .bigtomato{
     width: 100%;

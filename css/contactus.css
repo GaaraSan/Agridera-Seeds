@@ -193,7 +193,6 @@ hr{
 }
 .code_accept input{
     width: 225px;
-    /* margin: 0 30px; */
 }
 .code_bot{
     width: 99px;
@@ -228,6 +227,15 @@ span{
 }
 .datablock{
     margin-left: 20px;
+}
+.datablock p{
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.col h1{
+    margin-top: 15px;
 }
 /*                     footer                   */
 

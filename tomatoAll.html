@@ -78,8 +78,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-4 col-sm-6" v-if="products" v-for="p in products">
-                            <img :src="'./images/tangerineOne/'+p.image" :alt="'tangerine'+p.id">
-                            <div class="wh_bg"><b>{{p.title}}</b><br>{{p.short_text}}</div>
+                            <a :href="'./tomatoOne.html#'+p.id"><img :src="'./images/tangerineOne/'+p.image" :alt="'tangerine'+p.id"></a>
+                            <div class="wh_bg"><a :href="'./tomatoOne.html#'+p.id"><b>{{p.title}}</b><br>{{p.short_text}}</a></div>
                         </div>
                     </div>
                 </div>

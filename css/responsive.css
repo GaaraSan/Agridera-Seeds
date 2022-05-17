@@ -4,7 +4,7 @@
         padding-bottom: 10px;
     }
     .characteristics{
-        margin-top: 140px;
+        margin-top: 20px;
     }
     .activities_text, .caption_text{
         font-size: 40px;
@@ -90,7 +90,7 @@
     .name{
         margin-left: 20px;
     }
-    .btndownload{
+    .download button{
         float: left;
     }
 }

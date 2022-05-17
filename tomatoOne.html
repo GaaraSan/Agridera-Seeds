@@ -41,64 +41,51 @@
                 <img src="./images/tomatoOne/Arrow.svg" alt="<---">
                 <p>Return to all tomatoes</p>
             </a>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="main"><span>TAG 1002 (TAG 809) </span>Tomato Determinate Red Standard Round</p>
-                    <img src="./images/tomatoOne/Union.png" alt="xxxxx">
-                    <div class="row reddiv">
-                        <div class="redtomato">
-                            <img src="./images/tomatoOne/redVector.svg" alt="RedTomato">
+            <div class="item">
+                <div class="row" v-if="product">
+                    <div class="col-md-6">
+                        <p class="main"><span>{{product.title}}</span><br>{{product.short_text}}</p>
+                        <img src="./images/tomatoOne/Union.png" alt="xxxxx">
+                        <div class="row reddiv">
+                            <div class="redtomato">
+                                <img src="./images/tomatoOne/redVector.svg" alt="RedTomato">
+                            </div>
+                            <div class="col-md-9">
+                                <b>Very high yield and<br>excellent fruits quality!</b>
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <b>Very high yield and<br>excellent fruits quality!</b>
+                    </div> 
+                    <div class="col-md-6">
+                        <img :src="'./images/tangerineOne/'+product.image" class="bigtomato" alt="tomato">
+                        <div class="download">
+                            <button @click.prevent="addToCart(product.id)" v-if="!btnVisible"><span class="cartbtn">Add to card</span></button>
+                            <a href="./contactus.html"><button v-if="btnVisible"><span class="cartbtn">Go to card</span></button></a>
                         </div>
-                    </div>
-                </div> 
-                <div class="col-md-6">
-                    <img src="./images/tomatoOne/tomato.jpg" class="bigtomato" alt="tomato">
-                    <a href="#"><img src="./images/tomatoOne/Btndownload.svg" class="btndownload" alt="Download"></a>
-                </div>
-            </div>
-            <div class="row fckdescript">
-                <div class="col-md-6">
-                    <div class="name characteristics">
-                        <p>CHARACTERISTICS</p>
-                        <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
-                        <p class="description"><b>Resistance</b><br>HR: ToMV:0-2; Fol: 1,2; Ve/Vd;<br>IR: TYLCV</p>
-                    </div>
-                    <div class="name plant">
-                        <p>Plant</p>
-                        <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
-                        <ul class="description">
-                            <li class="lidescript"><span>Strong vigor that provides good leaf coverage.</span></li>
-                            <li class="lidescript"><span>Very high productivity with good fruit setting.</span></li>
-                            <li class="lidescript"><span>Early matured variety.</span></li>
-                        </ul>
-                    </div>
-                    <div class="name fruit">
-                        <p>Fruit</p>
-                        <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
-                        <ul class="description">
-                            <li class="lidescript"><span>Long shelf life on plant and post harvest.</span></li>
-                            <li class="lidescript"><span>Nice shiny attractive deep red color.</span></li>
-                            <li class="lidescript"><span>Average fruit size: 140 – 160 grams.</span></li>
-                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="name cycle">
-                        <p>Cycle</p>
-                        <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
-                        <ul class="description">
-                            <li class="lidescript"><span>Spring</span></li>
-                            <li class="lidescript"><span>Fall </span></li>
-                            <li class="lidescript"><span>Winter</span></li>
-                        </ul>
+                <div class="row fckdescript">
+                    <div class="col-md-6">
+                        <div class="name characteristics">
+                            <p>DESCRIPTION</p>
+                            <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
+                            <p class="description">{{product.desc}}</p>
+                        </div>
                     </div>
-                    <div class="name color">
-                        <p>Color</p>
-                        <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
-                        <p class="description">Red</p>
+                    <div class="col-md-6">
+                        <div class="name cycle">
+                            <p>Cycle</p>
+                            <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
+                            <ul class="description">
+                                <li class="lidescript"><span>Spring</span></li>
+                                <li class="lidescript"><span>Fall </span></li>
+                                <li class="lidescript"><span>Winter</span></li>
+                            </ul>
+                        </div>
+                        <div class="name color">
+                            <p>Color</p>
+                            <img src="./images/tomatoOne/Line2.svg" class="line" alt="------------">
+                            <p class="description">Orange</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,5 +150,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
